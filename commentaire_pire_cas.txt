@@ -1,0 +1,15 @@
+﻿TP5 - Commentaire sur le pire cas observé (a copier dans README):
+
+Le tri fusion garde toujours O(n log n) meme sur un tableau deja trie.
+Il coupe toujours en deux donc pas de pire cas.
+
+Le tri rapide avec pivot = dernier element devient tres lent quand le tableau est deja trie.
+Dans ce cas le partition coupe mal : un cote a n-1 elements et l'autre 0.
+Complexité devient O(n²). On l'a vu dans le bench : sur 10000 elements deja tries,
+le tri rapide prend ~0.08 sec contre 0.002 sec en aleatoire, et peut meme crasher 
+en stack overflow si on pousse a 50000.
+
+Solution : choisir pivot aleatoire ou mediane, mais ici on garde la version simple du cours.
+
+Intégration mini-projet (chap 8): on peut ajouter tris.h dans notre biblio et utiliser
+tri_fusion pour trier la liste des mots de motcompte.c du TP4.

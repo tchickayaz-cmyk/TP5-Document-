@@ -1,0 +1,5 @@
+﻿Benchmark TP5 (exemple sur mon PC):
+1000 alea: fusion 0.0002s rapide 0.0001s
+1000 trie: fusion 0.0001s rapide 0.0021s  <- ralentissement x20
+10000 alea: fusion 0.002s rapide 0.001s
+10000 trie: fusion 0.001s rapide 0.08s   <- pire cas visible
